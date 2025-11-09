@@ -21,7 +21,7 @@ En el contexto chileno, la relevancia económica de esta tecnología se amplific
 
 
 # Figura del Sistema:
-<img width="325" height="516" alt="image" src="https://github.com/user-attachments/assets/d9b7a500-9595-4089-919b-bce05f5ee83b" />
+<img width="325" height="516" alt="image" src="https://github.com/user-attachments/assets/88478938-ec13-4ac2-a343-c32bf5dc4e57" />
 
 
 # Rendimiento-de-distintos-materiales-de-cambio-de-fase-PCM-
