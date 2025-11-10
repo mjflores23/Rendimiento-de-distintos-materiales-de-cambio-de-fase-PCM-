@@ -49,7 +49,7 @@ Asegúrate de tener Python y las siguientes librerías instaladas:
    
 2. Copia los 5 Paquetes: Copia los 5 archivos .py de los materiales (que están en este repositorio) y pégalos dentro de la carpeta ```.../openterrace/bed_substances/.```
 - ```sodium_acetate_trihydrate.py```
-- ```magnesium_eutectic.py```
+-```magnesium_eutectic.py```
 -```barium_hydroxide_octahydrate.py```
 -```magnesium_nitrate_hexahydrate.py```
 -```magnesium_chloride_hexahydrate.py```
@@ -59,6 +59,7 @@ Asegúrate de tener Python y las siguientes librerías instaladas:
 <p align="justify">
 Debido a un bug de estado en openterrace que impide usar un bucle for, se debe ejecutar cada simulación en un proceso de Python separado.
 En la terminal, ejecuta los siguientes 5 scripts, uno por uno. Cada script correrá una simulación de 4 horas y guardará los resultados en un archivo .npz.
+</p>
 ``` # Simulación 1
   simulate_sodium_acetate.py ```
 _(Espera a que termine... creará "results_sodium_acetate_trihydrate.npz")_
@@ -99,7 +100,6 @@ Este proyecto consiste en utilizar el paquete de Python OpenTerrace, que incluye
 pip install openterrace
 ```
 
-</p>
 
 Referencias:
 Dinçer, I., & Rosen, M. A. (2011). Thermal energy storage: Systems and applications. Wiley.
