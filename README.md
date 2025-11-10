@@ -136,7 +136,7 @@ El código implementa esto de forma generalizada, donde los coeficientes D (que 
 
 La transferencia de calor por convección, que es el transporte de energía causado por el flujo de fluido (agua) durante el ciclo de descarga, se modela utilizando un esquema upwind.
 - Descripción: A diferencia del esquema central, el método upwind es direccional y está diseñado para problemas dominados por el flujo. Determina el valor de la temperatura en un nodo basándose en la información del nodo "aguas arriba", es decir, el nodo del que proviene el flujo.
-- Precisión: Como se indica en el paquete `convection_schemes` de `OpenTerrace`, la función `upwind_1d`, es un esquema de primer orden de precisión $O(\Delta x)$., pero es incondicionalmente estable, lo que previene las oscilaciones no físicas que pueden ocurrir con los esquemas centrales en problemas de alta advección.
+- Precisión: Como se indica en el paquete `convection_schemes` de `OpenTerrace`, la función `upwind_1d`, es un esquema de primer orden de precisión $O(\Delta x)$, pero es incondicionalmente estable, lo que previene las oscilaciones no físicas que pueden ocurrir con los esquemas centrales en problemas de alta advección.
 - Implementación: La función `upwind_1d` implementa este método. La lógica `np.maximum(F,0)` y `np.minimum(F,0)` evalúa la dirección del vector de flujo F en cada interfaz de nodo para decidir si se debe usar el valor de `x[j,i-1]` o `x[j,i+1]` para calcular el flujo advectivo.
 
 **Aplicación en el Proyecto**
@@ -147,6 +147,7 @@ En la simulación del benchmark, no es necesario implementar manualmente estas e
 
 
 # Modelo Matématico 
+La ecuación gobernante del programa es el siguiente:
 
 $$\frac{\partial T}{\partial t} + u \frac{\partial T}{\partial x} = \alpha \frac{\partial^2 T}{\partial x^2}$$
 
