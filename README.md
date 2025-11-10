@@ -95,18 +95,15 @@ Al ejecutar el ``` plot_all_pcms.py```, obtendrás dos salidas:
 2. Una tabla en la terminal: Mostrará la "Energía total liberada (MJ)" para cada PCM, ordenada del mejor al peor, permitiendo un análisis cuantitativo del rendimiento.
 
 
-
-
-
-
-
-
-
-
-
 # Figura del Sistema:
-<img width="315" height="485" alt="image" src="https://github.com/user-attachments/assets/dbed3a99-8d12-45cd-9d64-35d8268faff9" />
-Figura 1: Carga térmica (Elaboración propia)
+<h3 align="center">Figura del Sistema</h3>
+
+<p align="center">
+  <img width="315" height="485" alt="image" src="https://github.com/user-attachments/assets/dbed3a99-8d12-45cd-9d64-35d8268faff9" />
+  <br>
+  <em>Figura 1: Carga térmica (Elaboración propia)</em>
+</p>
+
 
 # Rendimiento-de-distintos-materiales-de-cambio-de-fase-PCM-
 Este proyecto consiste en utilizar el paquete de Python OpenTerrace, que incluye modelos para estanques de almacenamiento térmico. Dado que el paquete tiene pocos PCMs disponibles, investigaré nuevos materiales en la literatura y los incorporaré al código. Luego, realizaré simulaciones para evaluar el rendimiento de un PCM relevante para el país.
