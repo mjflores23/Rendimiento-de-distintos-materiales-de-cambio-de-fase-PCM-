@@ -136,4 +136,5 @@ El código implementa esto de forma generalizada, donde los coeficientes D (que 
 
 # Referencias:
 Dinçer, I., & Rosen, M. A. (2011). Thermal energy storage: Systems and applications. Wiley.
+
 Najafian, A., Haghighat, F., & Moreau, A. (2015). Integration of PCM in domestic hot water tanks: Optimization for shifting peak demand. Energy and Buildings, 106, 59–64. https://doi.org/10.1016/j.enbuild.2015.05.036
