@@ -67,23 +67,23 @@ En la terminal, ejecuta los siguientes 5 scripts, **uno por uno**. Cada script c
 
 # Simulación 1
 `simulate_sodium_acetate.py`.
-# → Espera a que termine... se creará "results_sodium_acetate_trihydrate.npz"
+ → Espera a que termine... se creará "results_sodium_acetate_trihydrate.npz"
 
 # Simulación 2
 `simulate_magnesium_eutectic.py`
-# → Espera a que termine... se creará "results_magnesium_eutectic.npz"
+ → Espera a que termine... se creará "results_magnesium_eutectic.npz"
 
 # Simulación 3
 `simulate_barium_hydroxide.py`
-# → Espera a que termine... se creará "results_barium_hydroxide_octahydrate.npz"
+ → Espera a que termine... se creará "results_barium_hydroxide_octahydrate.npz"
 
 # Simulación 4
 `simulate_magnesium_nitrate.py`
-# → Espera a que termine... se creará "results_magnesium_nitrate_hexahydrate.npz"
+→ Espera a que termine... se creará "results_magnesium_nitrate_hexahydrate.npz"
 
 # Simulación 5
 `simulate_magnesium_chloride.py`
-# → Espera a que termine... creará "results_magnesium_chloride_hexahydrate.npz"
+→ Espera a que termine... creará "results_magnesium_chloride_hexahydrate.npz"
 
 
 **Resultados Esperados:**
