@@ -117,6 +117,13 @@ Al ejecutar el ``` plot_all_pcms.py```, obtendrás dos salidas:
 </p>
 
 
+**Métodos numéricos:**
+Para la simulación del estanque de almacenamiento térmico, el proyecto utiliza el paquete OpenTerrace, el cual resuelve las ecuaciones de transferencia de calor mediante el Método de Diferencias Finitas (FDM). Este método discretiza el dominio espacial (el estanque) en una serie de nodos y aproxima las ecuaciones diferenciales que gobiernan la transferencia de calor en un sistema de ecuaciones algebraicas.
+El modelo del estanque (un lecho empacado con PCM y agua) involucra dos fenómenos físicos principales que OpenTerrace trata con esquemas de diferencias finitas específicos, como lo indican las funciones fuente del paquete.
+
+
+
+
 
 **Referencias:**
 Dinçer, I., & Rosen, M. A. (2011). Thermal energy storage: Systems and applications. Wiley.
