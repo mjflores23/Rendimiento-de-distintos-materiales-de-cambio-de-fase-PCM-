@@ -147,29 +147,52 @@ En la simulación del benchmark, no es necesario implementar manualmente estas e
 
 
 # Modelo Matématico 
-Esta es la Ecuación de Convección-Difusión. Describe cómo cambia la temperatura $T$ en un punto del espacio $x$ a lo largo del tiempo $t$, cuando el calor es transportado por un fluido en movimiento (convección) y también se esparce a través del propio fluido (conducción/difusión).
+Esta es la ecuación de Convección-Difusión. Describe cómo cambia la temperatura $T$ en un punto del espacio $x$ a lo largo del tiempo $t$, cuando el calor es transportado por un fluido en movimiento (convección) y también se esparce a través del propio fluido (conducción/difusión).
 La ecuación gobernante del programa es el siguiente:
 
 $$\frac{\partial T}{\partial t} + u \frac{\partial T}{\partial x} = \alpha \frac{\partial^2 T}{\partial x^2}$$
 
 Cada parte de la ecuación representa un fenómeno físico distinto:
 
-**Término Transitorio (o de Acumulación):**
+**Término Transitorio:**
 
-$\frac{\partial T}{\partial t}$
+$$\frac{\partial T}{\partial t}$$
 - Es la tasa de cambio de la **Temperatura** (*T*) con respecto al **Tiempo** (*t*) en un punto fijo.  
 - **Qué significa:** Indica qué tan rápido se está calentando o enfriando un punto específico en el espacio.  
 - **Si es cero:** Si $\frac{\partial T}{\partial t} = 0$, significa que el sistema ha alcanzado el **estado estacionario**, las temperaturas ya no cambian con el tiempo.
   
 **Término de Convección**
 
-$u \frac{\partial T}{\partial x}$
+$$u \frac{\partial T}{\partial x}$$
 
 - Es el **transporte de calor** debido al movimiento (*flujo*) del fluido.  
 - **Qué significa:** El fluido, que se mueve a una **Velocidad** (*u*), “arrastra” la temperatura consigo.  
   Este término mide cuánto calor es “empujado” de una región a otra.  
 - **u:** Es la **velocidad** del fluido en la dirección *x*.  
 - $\frac{\partial T}{\partial x}$: Es el **gradiente de temperatura**, que mide cómo cambia la temperatura a lo largo de la posición *x*.
+
+**Término de Difusión (o Conducción)**
+
+$\alpha \frac{\partial^2 T}{\partial x^2}$
+
+- Es el **transporte de calor por conducción**, modelado por la **Ley de Fourier**.  
+- **Qué significa:** Describe cómo el calor se “difunde” naturalmente desde las zonas más calientes hacia las más frías, independientemente de si el fluido se mueve o no.  
+- **α:** Es la **Difusividad Térmica**. Es una propiedad del material (en este caso, del fluido) que mide qué tan bien conduce el calor (*k*) en relación con cuánto calor almacena (*ρcₚ*).  
+    La fórmula es: $\alpha = \dfrac{k}{\rho c_p}$.  
+  - $\dfrac{\partial^2 T}{\partial x^2}$: Es la **segunda derivada** de la temperatura. Mide la *“curvatura”* del perfil de temperatura.
+
+**Discretización de la Ecuación Global por Diferencias Finitas**
+
+*Derivada de Primer Orden (Término de Convección)*
+
+Para el término $\dfrac{\partial T}{\partial x}$, usamos la **Diferencia Central de Segundo Orden**:
+$$
+\left( \frac{\partial T}{\partial x} \right)_i \approx \frac{T_{i+1} - T_{i-1}}{2\Delta x}
+$$
+
+
+
+
 
 
 
