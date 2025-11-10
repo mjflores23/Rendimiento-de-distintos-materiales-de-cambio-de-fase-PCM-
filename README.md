@@ -142,8 +142,14 @@ La transferencia de calor por convección, que es el transporte de energía caus
 **Aplicación en el Proyecto**
 
 En la simulación del benchmark, no es necesario implementar manualmente estas ecuaciones. El proceso consiste en llamar a las funciones de OpenTerrace que ya contienen estas discretizaciones.
-•	Durante el ciclo de carga (sin flujo de agua), el fenómeno dominante será la conducción, resuelta mediante diferencias centrales.
-•	Durante el ciclo de descarga (con flujo de agua), ambos fenómenos están presentes: la conducción en el PCM y el agua, y la convección del calor por el movimiento del agua, resuelta mediante el esquema upwind.
+- Durante el ciclo de carga (sin flujo de agua), el fenómeno dominante será la conducción, resuelta mediante diferencias centrales.
+- Durante el ciclo de descarga (con flujo de agua), ambos fenómenos están presentes: la conducción en el PCM y el agua, y la convección del calor por el movimiento del agua, resuelta mediante el esquema upwind.
+
+
+# Modelo Matématico 
+
+$$\frac{\partial T}{\partial t} + u \frac{\partial T}{\partial x} = \alpha \frac{\partial^2 T}{\partial x^2}$$
+
 
 
 
