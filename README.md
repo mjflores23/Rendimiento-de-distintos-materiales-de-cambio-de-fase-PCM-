@@ -63,15 +63,25 @@ En la terminal, ejecuta los siguientes 5 scripts, uno por uno. Cada script corre
 ```Simulación 1
   simulate_sodium_acetate.py```
 *(Espera a que termine... creará "results_sodium_acetate_trihydrate.npz")*
-  # Simulación 2
-python simulate_magnesium_eutectic.py
-(Espera a que termine... creará "results_magnesium_eutectic.npz")# Simulación 3
-python simulate_barium_hydroxide.py
-(Espera a que termine... creará "results_barium_hydroxide_octahydrate.npz")# Simulación 4
-python simulate_magnesium_nitrate.py
-(Espera a que termine... creará "results_magnesium_nitrate_hexahydrate.npz")# Simulación 5
-python simulate_magnesium_chloride.py
-(Espera a que termine... creará "results_magnesium_chloride_hexahydrate.npz")Paso 3: Generar el Gráfico Comparativo y los ResultadosUna vez que tengas los 5 archivos results_...npz en tu carpeta, ejecuta el script final de ploteo:python plot_all_pcms.py
+
+```Simulación 2
+  simulate_magnesium_eutectic.py```
+*(Espera a que termine... creará "results_magnesium_eutectic.npz")*
+
+```Simulación 3
+  simulate_barium_hydroxide.py```
+*(Espera a que termine... creará "results_barium_hydroxide_octahydrate.npz")*
+
+```Simulación 4
+  simulate_magnesium_nitrate.py```
+(Espera a que termine... creará "results_magnesium_nitrate_hexahydrate.npz")
+
+```Simulación 5
+python simulate_magnesium_chloride.py```
+(Espera a que termine... creará "results_magnesium_chloride_hexahydrate.npz")
+
+**Paso 3: Generar el Gráfico Comparativo y los Resultados**
+Una vez que tengas los 5 archivos results_...npz en tu carpeta, ejecuta el script final de ploteo:python plot_all_pcms.py
 
 **Resultados Esperados:**
 Al ejecutar el ``` plot_all_pcms.py```, obtendrás dos salidas:
