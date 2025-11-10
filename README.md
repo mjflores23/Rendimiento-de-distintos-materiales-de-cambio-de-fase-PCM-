@@ -45,9 +45,15 @@ Asegúrate de tener Python y las siguientes librerías instaladas:
 **Paso 1: "Instalar" los Paquetes de PCM**
  ```OpenTerrace``` no incluye estos materiales por defecto. Debes añadirlos manualmente a la librería.
  
-1. Encuentra tu librería: Encuentra la ruta de ```openterrace```:
+1. Encuentra tu librería: Encuentra la ruta de ```Openterrace``` para luego abrir la carpeta  ```bed_subtances```
    
-3. Copia los 5 Paquetes: Copia los 5 archivos .py de los materiales (que están en la carpeta pcm_packages de este repositorio) y pégalos dentro de la carpeta .../openterrace/substances/.sodium_acetate_trihydrate.pymagnesium_eutectic.pybarium_hydroxide_octahydrate.pymagnesium_nitrate_hexahydrate.pymagnesium_chloride_hexahydrate.py¡Listo! Ahora openterrace "conoce" tus 5 materiales.Paso 2: Ejecutar las 5 Simulaciones (Una por Una)Debido a un bug de estado en openterrace que impide usar un bucle for, debemos ejecutar cada simulación en un proceso de Python separado.En tu terminal, ejecuta los siguientes 5 scripts, uno por uno. Cada script correrá una simulación de 4 horas y guardará los resultados en un archivo .npz.# Simulación 1
+2. Copia los 5 Paquetes: Copia los 5 archivos .py de los materiales (que están en este repositorio) y pégalos dentro de la carpeta ```.../openterrace/bed_substances/.```
+- ```sodium_acetate_trihydrate.py```
+- ```magnesium_eutectic.py```
+-```barium_hydroxide_octahydrate.py```
+-```magnesium_nitrate_hexahydrate.py```
+magnesium_chloride_hexahydrate.py
+¡Listo! Ahora openterrace "conoce" tus 5 materiales.Paso 2: Ejecutar las 5 Simulaciones (Una por Una)Debido a un bug de estado en openterrace que impide usar un bucle for, debemos ejecutar cada simulación en un proceso de Python separado.En tu terminal, ejecuta los siguientes 5 scripts, uno por uno. Cada script correrá una simulación de 4 horas y guardará los resultados en un archivo .npz.# Simulación 1
 python simulate_sodium_acetate.py
 (Espera a que termine... creará "results_sodium_acetate_trihydrate.npz")# Simulación 2
 python simulate_magnesium_eutectic.py
