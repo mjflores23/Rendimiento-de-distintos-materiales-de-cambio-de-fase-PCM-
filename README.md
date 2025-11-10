@@ -35,9 +35,11 @@ Todas las simulaciones se basan en un benchmark estandarizado que representa la 
   
 **Implementación (Paso a Paso)** 
 Se debe seguir estos 3 pasos para replicar los resultados.
+
 **Requisitos Previos**
 Asegúrate de tener Python y las siguientes librerías instaladas:
 ```pip install openterrace numpy matplotlib scipy```
+
 **Paso 1: "Instalar" los Paquetes de PCM**
  ```OpenTerrace``` no incluye estos materiales por defecto. Debes añadirlos manualmente a la librería.
 1. Encuentra tu librería: Busca la carpeta site-packages de tu instalación de Python. Dentro, encontrarás la ruta de openterrace:Ejemplo en Windows: C:\Users\TU_USUARIO\AppData\Local\Programs\Python\Python311\Lib\site-packages\openterrace\substances\Ejemplo en Mac/Linux: .../lib/python3.11/site-packages/openterrace/substances/
