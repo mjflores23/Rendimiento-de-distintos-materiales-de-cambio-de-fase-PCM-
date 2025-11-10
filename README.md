@@ -127,7 +127,9 @@ La transferencia de calor por conducción (tanto a través del PCM sólido como 
 - Descripción: Este esquema aproxima las derivadas espaciales de la temperatura en un nodo `i ` utilizando los valores de sus nodos vecinos inmediatos `(i-1 e i+1)` de forma simétrica.
 - Precisión: Como se indica en el paquete `difusión_schemes` de `OpenTerrace`, la función `central_difference_1d`, es un esquema de segundo orden de precisión $O(\Delta x^2)$.
 - Implementación: La función `central_difference_1d` del código aplica este método. La ecuación para un nodo `i` se deriva de la aproximación de la segunda derivada (flujo de calor):
- $\dfrac{\partial^2 T}{\partial x^2} \approx \dfrac{T_{i-1} - 2T_i + T_{i+1}}{\Delta x^2}$ 
+  
+ $$\dfrac{\partial^2 T}{\partial x^2} \approx \dfrac{T_{i-1} - 2T_i + T_{i+1}}{\Delta x^2}$$
+
 El código implementa esto de forma generalizada, donde los coeficientes D (que incluyen la conductividad térmica y la distancia) se multiplican por los nodos vecinos.
 
 **2. Convección (Upwind)**
