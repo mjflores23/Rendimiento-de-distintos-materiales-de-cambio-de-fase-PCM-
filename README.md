@@ -117,14 +117,22 @@ Al ejecutar el ``` plot_all_pcms.py```, obtendrás dos salidas:
 </p>
 
 
-**Métodos numéricos:**
+# Métodos numéricos:
 Para la simulación del estanque de almacenamiento térmico, el proyecto utiliza el paquete OpenTerrace, el cual resuelve las ecuaciones de transferencia de calor mediante el Método de Diferencias Finitas (FDM). Este método discretiza el dominio espacial (el estanque) en una serie de nodos y aproxima las ecuaciones diferenciales que gobiernan la transferencia de calor en un sistema de ecuaciones algebraicas.
 El modelo del estanque (un lecho empacado con PCM y agua) involucra dos fenómenos físicos principales que OpenTerrace trata con esquemas de diferencias finitas específicos, como lo indican las funciones fuente del paquete.
 
+**1. Conducción (Diferencias Finitas Centrales)**
+La transferencia de calor por conducción (tanto a través del PCM sólido como del fluido) se modela utilizando un esquema de diferencias finitas centrales.
+- Descripción: Este esquema aproxima las derivadas espaciales de la temperatura en un nodo i utilizando los valores de sus nodos vecinos inmediatos (i-1 e i+1) de forma simétrica.
+- Precisión: Como se indica en el paquete difusión_schemes de OpenTerrace, la función central_difference_1d, es un esquema de segundo orden de precisión (O(∆x^2)).
+- Implementación: La función central_difference_1d del código aplica este método. La ecuación para un nodo i se deriva de la aproximación de la segunda derivada (flujo de calor):
+(∂^2 T)/(∂^2 x^2 )≈(T_(i-1)-2T_i+T_(i+1 ))/(∆x^2 )  
+El código implementa esto de forma generalizada, donde los coeficientes D (que incluyen la conductividad térmica y la distancia) se multiplican por los nodos vecinos.
 
 
 
 
-**Referencias:**
+
+# Referencias:
 Dinçer, I., & Rosen, M. A. (2011). Thermal energy storage: Systems and applications. Wiley.
 Najafian, A., Haghighat, F., & Moreau, A. (2015). Integration of PCM in domestic hot water tanks: Optimization for shifting peak demand. Energy and Buildings, 106, 59–64. https://doi.org/10.1016/j.enbuild.2015.05.036
