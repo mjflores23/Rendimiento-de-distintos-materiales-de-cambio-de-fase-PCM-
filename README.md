@@ -85,11 +85,14 @@ En la terminal, ejecuta los siguientes 5 scripts, **uno por uno**. Cada script c
 `simulate_magnesium_chloride.py`
 → Espera a que termine... creará "results_magnesium_chloride_hexahydrate.npz"
 
+### Paso 3: Generar el gráfico comparativo y los Resultados
+Una vez que se tenga los 5 archivos `results_...npz` en la carpeta, ejecuta el script final de ploteo:
+`plot_all_pcms.py`
 
 **Resultados Esperados:**
 Al ejecutar el ``` plot_all_pcms.py```, obtendrás dos salidas:
-1. Un gráfico (comparacion_descarga_FINAL.png): Una ventana emergente mostrará el gráfico comparativo de la temperatura de salida de los 5 PCMs a lo largo de las 4 horas.
-2. Una tabla en la terminal: Mostrará la "Energía Total Liberada (MJ)" para cada PCM, ordenada del mejor al peor, permitiendo un análisis cuantitativo del rendimiento.
+1. Un gráfico (`comparacion_descarga_FINAL.png`): Una ventana emergente mostrará el gráfico comparativo de la temperatura de salida de los 5 PCMs a lo largo de las 4 horas.
+2. Una tabla en la terminal: Mostrará la "Energía total liberada (MJ)" para cada PCM, ordenada del mejor al peor, permitiendo un análisis cuantitativo del rendimiento.
 
 
 
