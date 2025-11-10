@@ -47,41 +47,51 @@ Asegúrate de tener Python y las siguientes librerías instaladas:
  
 1. Encuentra la librería: Encuentra la ruta de ```Openterrace``` para luego abrir la carpeta  ```bed_substances```
    
-2. Copia los 5 Paquetes: Copia los 5 archivos .py de los materiales (que están en este repositorio) y pégalos dentro de la carpeta ```.../openterrace/bed_substances/.```
--```sodium_acetate_trihydrate.py```
--```magnesium_eutectic.py```
--```barium_hydroxide_octahydrate.py```
--```magnesium_nitrate_hexahydrate.py```
--```magnesium_chloride_hexahydrate.py```
-3. Ahora openterrace "conoce" los 5 materiales (PCMs).
-  
-**Paso 2: Ejecutar las 5 Simulaciones (Una por Una)**
+### Paso 1: Copiar los Paquetes de Materiales
 
-Debido a un bug de estado en openterrace que impide usar un bucle for, se debe ejecutar cada simulación en un proceso de Python separado.
-En la terminal, ejecuta los siguientes 5 scripts, uno por uno. Cada script correrá una simulación de 4 horas y guardará los resultados en un archivo .npz.
+2. **Copia los 5 paquetes:**  
+   Copia los 5 archivos `.py` de los materiales (que están en este repositorio) y pégalos dentro de la carpeta:  
+   ```.../openterrace/bed_substances/.```
 
-```Simulación 1
-  simulate_sodium_acetate.py```
-*(Espera a que termine... creará "results_sodium_acetate_trihydrate.npz")*
+   - `sodium_acetate_trihydrate.py`  
+   - `magnesium_eutectic.py`  
+   - `barium_hydroxide_octahydrate.py`  
+   - `magnesium_nitrate_hexahydrate.py`  
+   - `magnesium_chloride_hexahydrate.py`
 
-```Simulación 2
-  simulate_magnesium_eutectic.py```
-*(Espera a que termine... creará "results_magnesium_eutectic.npz")*
+3. Ahora **OpenTerrace** “conoce” los 5 materiales (PCMs).
 
-```Simulación 3
-  simulate_barium_hydroxide.py```
-*(Espera a que termine... creará "results_barium_hydroxide_octahydrate.npz")*
+---
 
-```Simulación 4
-  simulate_magnesium_nitrate.py```
-(Espera a que termine... creará "results_magnesium_nitrate_hexahydrate.npz")
+### Paso 2: Ejecutar las 5 Simulaciones (una por una)
 
-```Simulación 5
-python simulate_magnesium_chloride.py```
-(Espera a que termine... creará "results_magnesium_chloride_hexahydrate.npz")
+Debido a un *bug de estado* en **OpenTerrace** que impide usar un bucle `for`,  
+se debe ejecutar **cada simulación en un proceso de Python separado**.
 
-**Paso 3: Generar el Gráfico Comparativo y los Resultados**
-Una vez que tengas los 5 archivos results_...npz en tu carpeta, ejecuta el script final de ploteo:python plot_all_pcms.py
+En la terminal, ejecuta los siguientes 5 scripts, **uno por uno**.  
+Cada script correrá una simulación de 4 horas y guardará los resultados en un archivo `.npz`.
+
+```bash
+# Simulación 1
+python simulate_sodium_acetate.py
+# → Espera a que termine... creará "results_sodium_acetate_trihydrate.npz"
+
+# Simulación 2
+python simulate_magnesium_eutectic.py
+# → Espera a que termine... creará "results_magnesium_eutectic.npz"
+
+# Simulación 3
+python simulate_barium_hydroxide.py
+# → Espera a que termine... creará "results_barium_hydroxide_octahydrate.npz"
+
+# Simulación 4
+python simulate_magnesium_nitrate.py
+# → Espera a que termine... creará "results_magnesium_nitrate_hexahydrate.npz"
+
+# Simulación 5
+python simulate_magnesium_chloride.py
+# → Espera a que termine... creará "results_magnesium_chloride_hexahydrate.npz"
+
 
 **Resultados Esperados:**
 Al ejecutar el ``` plot_all_pcms.py```, obtendrás dos salidas:
