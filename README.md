@@ -104,10 +104,9 @@ Al ejecutar el ``` plot_all_pcms.py```, obtendrás dos salidas:
 
 
 
-
 # Figura del Sistema:
-<img width="325" height="516" alt="image" src="https://github.com/user-attachments/assets/88478938-ec13-4ac2-a343-c32bf5dc4e57" />
-
+<img width="315" height="485" alt="image" src="https://github.com/user-attachments/assets/dbed3a99-8d12-45cd-9d64-35d8268faff9" />
+Figura 1: Carga térmica (Elaboración propia)
 
 # Rendimiento-de-distintos-materiales-de-cambio-de-fase-PCM-
 Este proyecto consiste en utilizar el paquete de Python OpenTerrace, que incluye modelos para estanques de almacenamiento térmico. Dado que el paquete tiene pocos PCMs disponibles, investigaré nuevos materiales en la literatura y los incorporaré al código. Luego, realizaré simulaciones para evaluar el rendimiento de un PCM relevante para el país.
