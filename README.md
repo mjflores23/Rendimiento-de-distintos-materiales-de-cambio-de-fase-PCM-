@@ -16,7 +16,30 @@ Como demuestra el estudio de referencia, un estanque residencial optimizado con 
 
 En el contexto chileno, la relevancia económica de esta tecnología se amplifica al considerar el desarrollo o la selección de materiales locales. El uso de PCMs de bajo costo y alta disponibilidad en el país, como las sales (por ejemplo, el acetato de sodio) o los hidratos de magnesio (como el nitrato o cloruro de magnesio provenientes de los salares del norte de Chile), permitiría reducir significativamente los costos de implementación de esta tecnología, convirtiéndola en una solución de eficiencia energética viable y escalable para las viviendas nacionales.
 
-# Implementación del Código
+# Implementación de la Simulación de Descarga de Estanque con PCMs de Chile 
+Este proyecto utiliza el software open-source openterrace para simular y comparar el rendimiento térmico de 5 Materiales de Cambio de Fase (PCMs) diferentes, con un enfoque en sales y compuestos relevantes para Chile.El objetivo es evaluar qué material ofrece el mejor almacenamiento y entrega de energía para un estanque de agua caliente sanitaria (ACS) en un escenario de descarga estandarizado.Contexto del BenchmarkTodas las simulaciones se basan en un benchmark estandarizado que representa la descarga de un estanque de lecho empacado:Geometría del Estanque: Cilindro vertical (Altura: 1.5 m, Diámetro: 0.3 m).PCM: Cápsulas esféricas huecas (Radio ext: 0.03 m, Radio int: 0.01 m).Condición Inicial: El estanque (agua + PCM) está completamente cargado a 80°C.Simulación de Descarga: Se inyecta agua fría a 20°C por la parte superior del estanque.Flujo: El agua fluye hacia abajo a -0.01 kg/s.Salida: El agua caliente se mide en la parte inferior (nodo 0).Duración: 4 horas (14400 segundos).
+Receta de Implementación (Paso a Paso)Sigue estos 3 pasos para replicar los resultados.Requisitos PreviosAsegúrate de tener Python y las siguientes librerías instaladas:pip install openterrace numpy matplotlib scipy
+Paso 1: "Instalar" los Paquetes de PCMOpenTerrace no incluye estos materiales por defecto. Debes añadirlos manualmente a la librería.Encuentra tu librería: Busca la carpeta site-packages de tu instalación de Python. Dentro, encontrarás la ruta de openterrace:Ejemplo en Windows: C:\Users\TU_USUARIO\AppData\Local\Programs\Python\Python311\Lib\site-packages\openterrace\substances\Ejemplo en Mac/Linux: .../lib/python3.11/site-packages/openterrace/substances/Copia los 5 Paquetes: Copia los 5 archivos .py de los materiales (que están en la carpeta pcm_packages de este repositorio) y pégalos dentro de la carpeta .../openterrace/substances/.sodium_acetate_trihydrate.pymagnesium_eutectic.pybarium_hydroxide_octahydrate.pymagnesium_nitrate_hexahydrate.pymagnesium_chloride_hexahydrate.py¡Listo! Ahora openterrace "conoce" tus 5 materiales.Paso 2: Ejecutar las 5 Simulaciones (Una por Una)Debido a un bug de estado en openterrace que impide usar un bucle for, debemos ejecutar cada simulación en un proceso de Python separado.En tu terminal, ejecuta los siguientes 5 scripts, uno por uno. Cada script correrá una simulación de 4 horas y guardará los resultados en un archivo .npz.# Simulación 1
+python simulate_sodium_acetate.py
+(Espera a que termine... creará "results_sodium_acetate_trihydrate.npz")# Simulación 2
+python simulate_magnesium_eutectic.py
+(Espera a que termine... creará "results_magnesium_eutectic.npz")# Simulación 3
+python simulate_barium_hydroxide.py
+(Espera a que termine... creará "results_barium_hydroxide_octahydrate.npz")# Simulación 4
+python simulate_magnesium_nitrate.py
+(Espera a que termine... creará "results_magnesium_nitrate_hexahydrate.npz")# Simulación 5
+python simulate_magnesium_chloride.py
+(Espera a que termine... creará "results_magnesium_chloride_hexahydrate.npz")Paso 3: Generar el Gráfico Comparativo y los ResultadosUna vez que tengas los 5 archivos results_...npz en tu carpeta, ejecuta el script final de ploteo:python plot_all_pcms.py
+📈 Resultados EsperadosAl ejecutar el plot_all_pcms.py, obtendrás dos salidas:Un gráfico (comparacion_descarga_FINAL.png): Una ventana emergente mostrará el gráfico comparativo de la temperatura de salida de los 5 PCMs a lo largo de las 4 horas.Una tabla en la terminal: Mostrará la "Energía Total Liberada (MJ)" para cada PCM, ordenada del mejor al peor, permitiendo un análisis cuantitativo del rendimiento.
+
+
+
+
+
+
+
+
+
 
 
 
