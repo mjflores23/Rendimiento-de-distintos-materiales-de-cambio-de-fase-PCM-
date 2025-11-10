@@ -147,9 +147,17 @@ En la simulación del benchmark, no es necesario implementar manualmente estas e
 
 
 # Modelo Matématico 
+Esta es la Ecuación de Convección-Difusión. Describe cómo cambia la temperatura $T$ en un punto del espacio $x$ a lo largo del tiempo $t$, cuando el calor es transportado por un fluido en movimiento (convección) y también se esparce a través del propio fluido (conducción/difusión).
 La ecuación gobernante del programa es el siguiente:
 
 $$\frac{\partial T}{\partial t} + u \frac{\partial T}{\partial x} = \alpha \frac{\partial^2 T}{\partial x^2}$$
+
+Cada parte de la ecuación representa un fenómeno físico distinto:
+**Término Transitorio (o de Acumulación)**
+$\frac{\partial T}{\partial t}$
+- Es la tasa de cambio de la **Temperatura** (*T*) con respecto al **Tiempo** (*t*) en un punto fijo.  
+- **Qué significa:** Indica qué tan rápido se está calentando o enfriando un punto específico en el espacio.  
+- **Si es cero:** Si $\frac{\partial T}{\partial t} = 0$, significa que el sistema ha alcanzado el **estado estacionario**, las temperaturas ya no cambian con el tiempo.
 
 
 
