@@ -118,17 +118,28 @@ Al ejecutar el ``` plot_all_pcms.py```, obtendrás dos salidas:
 
 
 # Métodos numéricos:
+<p align="justify">
 Para la simulación del estanque de almacenamiento térmico, el proyecto utiliza el paquete OpenTerrace, el cual resuelve las ecuaciones de transferencia de calor mediante el Método de Diferencias Finitas (FDM). Este método discretiza el dominio espacial (el estanque) en una serie de nodos y aproxima las ecuaciones diferenciales que gobiernan la transferencia de calor en un sistema de ecuaciones algebraicas.
 El modelo del estanque (un lecho empacado con PCM y agua) involucra dos fenómenos físicos principales que OpenTerrace trata con esquemas de diferencias finitas específicos, como lo indican las funciones fuente del paquete.
 
 **1. Conducción (Diferencias Finitas Centrales)**
 La transferencia de calor por conducción (tanto a través del PCM sólido como del fluido) se modela utilizando un esquema de diferencias finitas centrales.
-- Descripción: Este esquema aproxima las derivadas espaciales de la temperatura en un nodo i utilizando los valores de sus nodos vecinos inmediatos `(i-1 e i+1)` de forma simétrica.
+- Descripción: Este esquema aproxima las derivadas espaciales de la temperatura en un nodo `i ` utilizando los valores de sus nodos vecinos inmediatos `(i-1 e i+1)` de forma simétrica.
 - Precisión: Como se indica en el paquete `difusión_schemes` de `OpenTerrace`, la función `central_difference_1d`, es un esquema de segundo orden de precisión $O(\Delta x^2)$.
-- Implementación: La función central_difference_1d del código aplica este método. La ecuación para un nodo i se deriva de la aproximación de la segunda derivada (flujo de calor):
-(∂^2 T)/(∂^2 x^2 )≈(T_(i-1)-2T_i+T_(i+1 ))/(∆x^2 )  
+- Implementación: La función `central_difference_1d` del código aplica este método. La ecuación para un nodo `i` se deriva de la aproximación de la segunda derivada (flujo de calor):
+ $\dfrac{\partial^2 T}{\partial x^2} \approx \dfrac{T_{i-1} - 2T_i + T_{i+1}}{\Delta x^2}$ 
 El código implementa esto de forma generalizada, donde los coeficientes D (que incluyen la conductividad térmica y la distancia) se multiplican por los nodos vecinos.
 
+**2. Convección (Upwind)**
+La transferencia de calor por convección, que es el transporte de energía causado por el flujo de fluido (agua) durante el ciclo de descarga, se modela utilizando un esquema upwind.
+- Descripción: A diferencia del esquema central, el método upwind es direccional y está diseñado para problemas dominados por el flujo. Determina el valor de la temperatura en un nodo basándose en la información del nodo "aguas arriba", es decir, el nodo del que proviene el flujo.
+- Precisión: Como se indica en el paquete convection_schemes de OpenTerrace, la función upwind_1d, es un esquema de primer orden de precisión $O(\Delta x)$., pero es incondicionalmente estable, lo que previene las oscilaciones no físicas que pueden ocurrir con los esquemas centrales en problemas de alta advección.
+- Implementación: La función upwind_1d implementa este método. La lógica np.maximum(F,0) y np.minimum(F,0) evalúa la dirección del vector de flujo F en cada interfaz de nodo para decidir si se debe usar el valor de x[j,i-1] o x[j,i+1] para calcular el flujo advectivo.
+
+**Aplicación en el Proyecto**
+En la simulación del benchmark, no es necesario implementar manualmente estas ecuaciones. El proceso consiste en llamar a las funciones de OpenTerrace que ya contienen estas discretizaciones.
+•	Durante el ciclo de carga (sin flujo de agua), el fenómeno dominante será la conducción, resuelta mediante diferencias centrales.
+•	Durante el ciclo de descarga (con flujo de agua), ambos fenómenos están presentes: la conducción en el PCM y el agua, y la convección del calor por el movimiento del agua, resuelta mediante el esquema upwind.
 
 
 
