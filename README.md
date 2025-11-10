@@ -25,17 +25,21 @@ Este proyecto utiliza el software open-source openterrace para simular y compara
 **Contexto del Benchmark**
 
 Todas las simulaciones se basan en un benchmark estandarizado que representa la descarga de un estanque de lecho empacado:
--**Geometría del Estanque:** Cilindro vertical (Altura: 1.5 m, Diámetro: 0.3 m).
--**Geometría del Estanque:** Cilindro vertical (Altura: 1.5 m, Diámetro: 0.3 m).
-PCM: Cápsulas esféricas huecas (Radio ext: 0.03 m, Radio int: 0.01 m).
+- Geometría del Estanque: Cilindro vertical (Altura: 1.5 m, Diámetro: 0.3 m).
+- PCM: Cápsulas esféricas huecas (Radio ext: 0.03 m, Radio int: 0.01 m).
 - Condición Inicial: El estanque (agua + PCM) está completamente cargado a 80°C.
 - Simulación de Descarga: Se inyecta agua fría a 20°C por la parte superior del estanque.
 - Flujo: El agua fluye hacia abajo a -0.01 kg/s.
 - Salida: El agua caliente se mide en la parte inferior (nodo 0).
 - Duración: 4 horas (14400 segundos).
   
-Receta de Implementación (Paso a Paso)Sigue estos 3 pasos para replicar los resultados.Requisitos PreviosAsegúrate de tener Python y las siguientes librerías instaladas:pip install openterrace numpy matplotlib scipy
-Paso 1: "Instalar" los Paquetes de PCMOpenTerrace no incluye estos materiales por defecto. Debes añadirlos manualmente a la librería.Encuentra tu librería: Busca la carpeta site-packages de tu instalación de Python. Dentro, encontrarás la ruta de openterrace:Ejemplo en Windows: C:\Users\TU_USUARIO\AppData\Local\Programs\Python\Python311\Lib\site-packages\openterrace\substances\Ejemplo en Mac/Linux: .../lib/python3.11/site-packages/openterrace/substances/Copia los 5 Paquetes: Copia los 5 archivos .py de los materiales (que están en la carpeta pcm_packages de este repositorio) y pégalos dentro de la carpeta .../openterrace/substances/.sodium_acetate_trihydrate.pymagnesium_eutectic.pybarium_hydroxide_octahydrate.pymagnesium_nitrate_hexahydrate.pymagnesium_chloride_hexahydrate.py¡Listo! Ahora openterrace "conoce" tus 5 materiales.Paso 2: Ejecutar las 5 Simulaciones (Una por Una)Debido a un bug de estado en openterrace que impide usar un bucle for, debemos ejecutar cada simulación en un proceso de Python separado.En tu terminal, ejecuta los siguientes 5 scripts, uno por uno. Cada script correrá una simulación de 4 horas y guardará los resultados en un archivo .npz.# Simulación 1
+**Implementación (Paso a Paso)** 
+Se debe seguir estos 3 pasos para replicar los resultados.
+**Requisitos Previos**
+<p align="justify">
+Asegúrate de tener Python y las siguientes librerías instaladas:
+```pip install openterrace numpy matplotlib scipy```
+**Paso 1: "Instalar" los Paquetes de PCM OpenTerrace no incluye estos materiales por defecto. Debes añadirlos manualmente a la librería.Encuentra tu librería: Busca la carpeta site-packages de tu instalación de Python. Dentro, encontrarás la ruta de openterrace:Ejemplo en Windows: C:\Users\TU_USUARIO\AppData\Local\Programs\Python\Python311\Lib\site-packages\openterrace\substances\Ejemplo en Mac/Linux: .../lib/python3.11/site-packages/openterrace/substances/Copia los 5 Paquetes: Copia los 5 archivos .py de los materiales (que están en la carpeta pcm_packages de este repositorio) y pégalos dentro de la carpeta .../openterrace/substances/.sodium_acetate_trihydrate.pymagnesium_eutectic.pybarium_hydroxide_octahydrate.pymagnesium_nitrate_hexahydrate.pymagnesium_chloride_hexahydrate.py¡Listo! Ahora openterrace "conoce" tus 5 materiales.Paso 2: Ejecutar las 5 Simulaciones (Una por Una)Debido a un bug de estado en openterrace que impide usar un bucle for, debemos ejecutar cada simulación en un proceso de Python separado.En tu terminal, ejecuta los siguientes 5 scripts, uno por uno. Cada script correrá una simulación de 4 horas y guardará los resultados en un archivo .npz.# Simulación 1
 python simulate_sodium_acetate.py
 (Espera a que termine... creará "results_sodium_acetate_trihydrate.npz")# Simulación 2
 python simulate_magnesium_eutectic.py
