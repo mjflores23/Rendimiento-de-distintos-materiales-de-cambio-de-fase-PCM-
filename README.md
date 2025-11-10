@@ -43,19 +43,26 @@ Asegúrate de tener Python y las siguientes librerías instaladas:
 ```pip install openterrace numpy matplotlib scipy```
 
 **Paso 1: "Instalar" los Paquetes de PCM**
- ```OpenTerrace``` no incluye estos materiales por defecto. Debes añadirlos manualmente a la librería.
+ ```OpenTerrace``` no incluye estos materiales por defecto. Se debe añadir manualmente a la librería.
  
-1. Encuentra tu librería: Encuentra la ruta de ```Openterrace``` para luego abrir la carpeta  ```bed_subtances```
+1. Encuentra la librería: Encuentra la ruta de ```Openterrace``` para luego abrir la carpeta  ```bed_substances```
    
 2. Copia los 5 Paquetes: Copia los 5 archivos .py de los materiales (que están en este repositorio) y pégalos dentro de la carpeta ```.../openterrace/bed_substances/.```
 - ```sodium_acetate_trihydrate.py```
 - ```magnesium_eutectic.py```
 -```barium_hydroxide_octahydrate.py```
 -```magnesium_nitrate_hexahydrate.py```
-magnesium_chloride_hexahydrate.py
-¡Listo! Ahora openterrace "conoce" tus 5 materiales.Paso 2: Ejecutar las 5 Simulaciones (Una por Una)Debido a un bug de estado en openterrace que impide usar un bucle for, debemos ejecutar cada simulación en un proceso de Python separado.En tu terminal, ejecuta los siguientes 5 scripts, uno por uno. Cada script correrá una simulación de 4 horas y guardará los resultados en un archivo .npz.# Simulación 1
-python simulate_sodium_acetate.py
-(Espera a que termine... creará "results_sodium_acetate_trihydrate.npz")# Simulación 2
+-```magnesium_chloride_hexahydrate.py```
+3. Ahora openterrace "conoce" los 5 materiales (PCMs).
+  
+**Paso 2: Ejecutar las 5 Simulaciones (Una por Una)**
+<p align="justify">
+Debido a un bug de estado en openterrace que impide usar un bucle for, se debe ejecutar cada simulación en un proceso de Python separado.
+En la terminal, ejecuta los siguientes 5 scripts, uno por uno. Cada script correrá una simulación de 4 horas y guardará los resultados en un archivo .npz.
+``` # Simulación 1
+  simulate_sodium_acetate.py ```
+_(Espera a que termine... creará "results_sodium_acetate_trihydrate.npz")_
+  # Simulación 2
 python simulate_magnesium_eutectic.py
 (Espera a que termine... creará "results_magnesium_eutectic.npz")# Simulación 3
 python simulate_barium_hydroxide.py
@@ -92,7 +99,7 @@ Este proyecto consiste en utilizar el paquete de Python OpenTerrace, que incluye
 pip install openterrace
 ```
 
-
+</p>
 
 Referencias:
 Dinçer, I., & Rosen, M. A. (2011). Thermal energy storage: Systems and applications. Wiley.
