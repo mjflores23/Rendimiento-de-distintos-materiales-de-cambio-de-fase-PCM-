@@ -187,9 +187,8 @@ $$\alpha \frac{\partial^2 T}{\partial x^2}$$
 *Derivada de Primer Orden (Término de Convección)*
 
 Para el término $\dfrac{\partial T}{\partial x}$, usamos la **Diferencia Central de Primer Orden**:
-$$
-\left( \frac{\partial T}{\partial x} \right)_i \approx \frac{T_{i+1} - T_{i-1}}{2\Delta x}
-$$
+
+$$\left( \frac{\partial T}{\partial x} \right)_i \approx \frac{T_{i+1} - T_{i-1}}{2\Delta x}$$
 
 *Derivada de Segundo Orden (Término de Difusión)*
 
