@@ -25,8 +25,8 @@ Este proyecto utiliza el software open-source openterrace para simular y compara
 **Contexto del Benchmark**
 <p align="justify">
 Todas las simulaciones se basan en un benchmark estandarizado que representa la descarga de un estanque de lecho empacado:
-*Geometría del Estanque: Cilindro vertical (Altura: 1.5 m, Diámetro: 0.3 m).
-- PCM: Cápsulas esféricas huecas (Radio ext: 0.03 m, Radio int: 0.01 m).
+        Geometría del Estanque: Cilindro vertical (Altura: 1.5 m, Diámetro: 0.3 m).
+        PCM: Cápsulas esféricas huecas (Radio ext: 0.03 m, Radio int: 0.01 m).
 - Condición Inicial: El estanque (agua + PCM) está completamente cargado a 80°C.
 - Simulación de Descarga: Se inyecta agua fría a 20°C por la parte superior del estanque.
 - Flujo: El agua fluye hacia abajo a -0.01 kg/s.
