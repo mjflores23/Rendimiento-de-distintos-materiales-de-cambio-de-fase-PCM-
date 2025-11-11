@@ -198,6 +198,9 @@ $$
 \left( \frac{\partial^2 T}{\partial x^2} \right)_i \approx \frac{T_{i+1} - 2T_i + T_{i-1}}{(\Delta x)^2}
 $$
 
+## Resultados 
+
+<img width="1200" height="800" alt="image" src="https://github.com/user-attachments/assets/5ea79832-e561-4baa-8ccd-10e7306a2f38" />
 
 
 
