@@ -130,8 +130,6 @@ La transferencia de calor por conducción (tanto a través del PCM sólido como 
   
  $$\dfrac{\partial^2 T}{\partial x^2} \approx \dfrac{T_{i-1} - 2T_i + T_{i+1}}{\Delta x^2}$$
 
-El código implementa esto de forma generalizada, donde los coeficientes D (que incluyen la conductividad térmica y la distancia) se multiplican por los nodos vecinos.
-
 **2. Convección (Upwind)**
 
 La transferencia de calor por convección, que es el transporte de energía causado por el flujo de fluido (agua) durante el ciclo de descarga, se modela utilizando un esquema upwind.
