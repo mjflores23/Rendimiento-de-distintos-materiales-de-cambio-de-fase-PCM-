@@ -13,7 +13,7 @@ def main():
         "Magnesio eutectico": "results_CARGA_CONDUCCION_magnesium_eutectic.npz"}
 
 
-    print("--- Iniciando Script de Comparación (Solo Temp. Fondo - Nodo 1) ---")
+    print("Iniciando Script de Comparación (Solo Temp. Fondo - Nodo 1)")
     
     #figura creada
     fig, ax_temp = plt.subplots(figsize=(12, 8))
@@ -43,11 +43,11 @@ def main():
                 max_time = times.max()
 
         except FileNotFoundError:
-            print(f"  ¡ADVERTENCIA! No se encontró el archivo: {nombre_archivo}.")
+            print(f"advertencia:No se encontró el archivo: {nombre_archivo}.")
             print("  Asegúrate de haber corrido la simulación primero.")
             print("  Se omitirá este archivo del gráfico.")
         except KeyError as e:
-            print(f"  ¡ERROR! El archivo {nombre_archivo} no contiene la variable esperada: {e}")
+            print(f"  error:El archivo {nombre_archivo} no contiene la variable esperada: {e}")
         except Exception as e:
             print(f"Ocurrió un error inesperado cargando {nombre_archivo}: {e}")
 
@@ -62,7 +62,7 @@ def main():
     plt.tight_layout(rect=[0, 0.03, 1, 0.95])
     
     #nombre archivo a guardar
-    output_filename = "grafico_comparativo_MAESTRO_TEMP_FONDO.svg"
+    output_filename = "grafico_comparativo_benchmark.svg"
     plt.savefig(output_filename)
     print(f"Gráfico comparativo guardado en '{output_filename}'")
     plt.show()
