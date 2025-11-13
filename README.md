@@ -183,13 +183,13 @@ $$\alpha \frac{\partial^2 T}{\partial x^2}$$
 **Discretización de la Ecuación Global por Diferencias Finitas**
 
 *Derivada de Primer Orden (Término de Convección)*
-
+<p align="justify">
 Para la convección $(u \dfrac{\partial T}{\partial x})$, utilizamos el esquema *Upwind* de Primer Orden.  
 Este método adapta la dirección de la diferencia finita según la dirección del flujo para garantizar la estabilidad numérica. En este caso el flujo es negativo, por lo cual se mueve de arriba hacia abajo 
+  
 **Caso**: Flujo Negativo ($u < 0$)
 
-El fluido se mueve de **derecha a izquierda** (o de arriba hacia abajo).  
-La información proviene del nodo *i + 1*.
+El fluido se mueve de **derecha a izquierda** (o de arriba hacia abajo).La información proviene del nodo *i + 1*.
 
 - **Esquema:** Diferencia Hacia Adelante (*Forward Difference*).
 
@@ -205,6 +205,13 @@ Para el término $\dfrac{\partial^2 T}{\partial x^2}$, usamos la **Diferencia Ce
 $$
 \left( \frac{\partial^2 T}{\partial x^2} \right)_i \approx \frac{T_{i+1} - 2T_i + T_{i-1}}{(\Delta x)^2}
 $$
+
+**Ecuación gobernante discretizada para velocidad negativa ($u < 0$)
+
+Al reemplazar estas aproximaciones en la ecuación de Convección-Difusión original, obtenemos la forma discretizada completa para el caso de **velocidad negativa**:
+
+$$
+\left[ \frac{T_i^{n+1} - T_i^n}{\Delta t} \right] + u \left[ \frac{T_{i+1}^n - T_i^n}{\Delta x} \right] = \alpha \left[ \frac{T_{i+1}^n - 2T_i^n + T_{i-1}^n}{(\Delta x)^2} \right]$$
 
 
 ## Resultados 
