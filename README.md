@@ -180,7 +180,7 @@ $$\alpha \frac{\partial^2 T}{\partial x^2}$$
 - $\dfrac{\partial^2 T}{\partial x^2}$: Es la **segunda derivada** de la temperatura. Mide la *“curvatura”* del perfil de temperatura.
 
 
-**Discretización de la Ecuación Global por Diferencias Finitas**
+**Discretización de la ecuación global por diferencias finitas**
 
 *Derivada de Primer Orden (Término de Convección)*
 <p align="justify">
@@ -206,9 +206,9 @@ $$
 \left( \frac{\partial^2 T}{\partial x^2} \right)_i \approx \frac{T_{i+1} - 2T_i + T_{i-1}}{(\Delta x)^2}
 $$
 
-**Ecuación gobernante discretizada para velocidad negativa ($u < 0$)
+**Ecuación gobernante discretizada para velocidad negativa ($u < 0$)**
 
-Al reemplazar estas aproximaciones en la ecuación de Convección-Difusión original, obtenemos la forma discretizada completa para el caso de **velocidad negativa**:
+Al reemplazar estas aproximaciones en la ecuación de convección-difusión original, obtenemos la forma discretizada completa para el caso de **velocidad negativa**:
 
 $$
 \left[ \frac{T_i^{n+1} - T_i^n}{\Delta t} \right] + u \left[ \frac{T_{i+1}^n - T_i^n}{\Delta x} \right] = \alpha \left[ \frac{T_{i+1}^n - 2T_i^n + T_{i-1}^n}{(\Delta x)^2} \right]$$
