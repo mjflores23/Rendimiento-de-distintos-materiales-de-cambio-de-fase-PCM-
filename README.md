@@ -18,7 +18,7 @@ Como demuestra el estudio de referencia, un estanque residencial optimizado con 
 <p align="justify">
 En el contexto chileno, la relevancia económica de esta tecnología se amplifica al considerar el desarrollo o la selección de materiales locales. El uso de PCMs de bajo costo y alta disponibilidad en el país, como las sales (por ejemplo, el acetato de sodio) o los hidratos de magnesio (como el nitrato o cloruro de magnesio provenientes de los salares del norte de Chile), permitiría reducir significativamente los costos de implementación de esta tecnología, convirtiéndola en una solución de eficiencia energética viable y escalable para las viviendas nacionales.
 
-# Implementación de la Simulación de Descarga de Estanque con PCMs de Chile 
+# Implementación de la simulación de descarga de estanque con PCMs de Chile 
 <p align="justify">
 Este proyecto utiliza el software open-source openterrace para simular y comparar el rendimiento térmico de 5 Materiales de Cambio de Fase (PCMs) diferentes, con un enfoque en sales y compuestos relevantes para Chile.El objetivo es evaluar qué material ofrece el mejor almacenamiento y entrega de energía para un estanque de agua caliente sanitaria en un escenario de descarga estandarizado.
 
@@ -93,6 +93,22 @@ Una vez que se tenga los 5 archivos `results_...npz` en la carpeta, ejecuta el s
 Al ejecutar el ``` plot_all_pcms.py```, obtendrás dos salidas:
 1. Un gráfico (`comparacion_descarga_FINAL.png`): Una ventana emergente mostrará el gráfico comparativo de la temperatura de salida de los 5 PCMs a lo largo de las 4 horas.
 2. Una tabla en la terminal: Mostrará la "Energía total liberada (MJ)" para cada PCM, ordenada del mejor al peor, permitiendo un análisis cuantitativo del rendimiento.
+
+
+# Implementación de la simulación de la carga de estanque con PCMs de Chile 
+<p align="justify">
+Este repositorio también contiene los scripts para simular la carga térmica de un estanque de almacenamiento con lecho empacado, utilizando `openterrace`.
+
+A diferencia de la simulación de descarga (que incluye convección por flujo), esta simulación modela un estanque estático (sin flujo), donde el calor se transfiere únicamente por conducción.
+
+
+
+
+
+
+
+
+
 
 
 # Figura del Sistema:
