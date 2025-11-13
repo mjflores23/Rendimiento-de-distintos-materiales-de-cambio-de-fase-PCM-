@@ -97,18 +97,33 @@ Al ejecutar el ``` plot_all_pcms.py```, obtendrás dos salidas:
 
 # Implementación de la simulación de la carga de estanque con PCMs de Chile 
 <p align="justify">
-Este repositorio también contiene los scripts para simular la carga térmica de un estanque de almacenamiento con lecho empacado, utilizando `openterrace`.
+Este repositorio también contiene los scripts para simular la carga térmica de un estanque de almacenamiento con lecho empacado, utilizando openterrace.
 
 A diferencia de la simulación de descarga (que incluye convección por flujo), esta simulación modela un estanque estático (sin flujo), donde el calor se transfiere únicamente por conducción.
+### Paso 1: Repetir el mismo paso 1 de la descarga térmica
+### Paso 2: Ejecutar las 5 Simulaciones (una por una)
 
+Este repositorio contiene **5 scripts de simulación de carga**, uno para cada PCM.En la terminal, ejecuta los siguientes 5 scripts, uno por uno. Cada uno de estos scripts está programado para correr una simulación de 4 horas, solo por conducción (`flow_rate = 0.0`), y guardar los resultados en un archivo `.npz`.  
 
+# Simulación 1
+`carga_sodium_acetate_trihydrate.py`.
+ → Espera a que termine... se creará "results_CARGA_CONDUCCION_sodium_acetate_trihydrate.npz"
 
+# Simulación 2
+`carga_magnesium_eutectic.py`
+ → Espera a que termine... se creará "results_CARGA_CONDUCCION_magnesium_eutectic.npz"
 
+# Simulación 3
+`carga_barium_hydroxide.py`
+ → Espera a que termine... se creará "results_CARGA_CONDUCCION_barium_hydroxide_octahydrate.npz"
 
+# Simulación 4
+`simulate_magnesium_nitrate.py`
+→ Espera a que termine... se creará "results_CARGA_CONDUCCION_magnesium_nitrate_hexahydrate.npz"
 
-
-
-
+# Simulación 5
+`simulate_magnesium_chloride.py`
+→ Espera a que termine... creará "results_CARGA_CONDUCCION_magnesium_chloride_hexahydrate.npz"
 
 
 # Figura del Sistema:
