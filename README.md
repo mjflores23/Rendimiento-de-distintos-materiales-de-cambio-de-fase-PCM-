@@ -184,9 +184,19 @@ $$\alpha \frac{\partial^2 T}{\partial x^2}$$
 
 *Derivada de Primer Orden (Término de Convección)*
 
-Para el término $\dfrac{\partial T}{\partial x}$, usamos la **Diferencia Central de Primer Orden**:
+Para la convección $(u \dfrac{\partial T}{\partial x})$, utilizamos el esquema *Upwind* de Primer Orden.  
+Este método adapta la dirección de la diferencia finita según la dirección del flujo para garantizar la estabilidad numérica. En este caso el flujo es negativo, por lo cual se mueve de arriba hacia abajo 
+**Caso**: Flujo Negativo ($u < 0$)
 
-$$\left( \frac{\partial T}{\partial x} \right)_i \approx \frac{T_{i+1} - T_{i-1}}{2\Delta x}$$
+El fluido se mueve de **derecha a izquierda** (o de arriba hacia abajo).  
+La información proviene del nodo *i + 1*.
+
+- **Esquema:** Diferencia Hacia Adelante (*Forward Difference*).
+
+$$
+\left( \frac{\partial T}{\partial x} \right)_i \approx \frac{T_{i+1}^n - T_i^n}{\Delta x}
+$$
+
 
 *Derivada de Segundo Orden (Término de Difusión)*
 
@@ -195,6 +205,7 @@ Para el término $\dfrac{\partial^2 T}{\partial x^2}$, usamos la **Diferencia Ce
 $$
 \left( \frac{\partial^2 T}{\partial x^2} \right)_i \approx \frac{T_{i+1} - 2T_i + T_{i-1}}{(\Delta x)^2}
 $$
+
 
 ## Resultados 
 
