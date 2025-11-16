@@ -129,6 +129,10 @@ Este repositorio contiene **5 scripts de simulación de carga**, uno para cada P
 Una vez que se tenga los 5 archivos `results_...npz` en la carpeta, ejecuta el script final de ploteo:
 `plot_all_pcms_carga.py`
 
+**Resultados Esperados:**
+Al ejecutar el ``` plot_all_pcms_carga.py```, obtendrás dos salidas:
+1. Un gráfico (`comparacion_descarga_FINAL.png`): Una ventana emergente mostrará el gráfico comparativo de la temperatura de salida de los 5 PCMs a lo largo de las 4 horas.
+
 
 
 
