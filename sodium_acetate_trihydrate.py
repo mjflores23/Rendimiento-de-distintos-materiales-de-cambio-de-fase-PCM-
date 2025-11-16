@@ -9,7 +9,7 @@ k_l = 2.0 W/mK (Liquid thermal conductivity)
 rho_s = 1360 kg/m^3 (Solid density)
 rho_l = 1260 kg/m^3 (Liquid density)
 cp_s = 1900 J/kgK (Solid cp)
-cp_l = 2505 J/kgK (Liquid cp)
+cp_l = 2505 J/kgK (Liquid cp)"""
 
 
 
