@@ -11,12 +11,7 @@ rho_l = 1260 kg/m^3 (Liquid density)
 cp_s = 1900 J/kgK (Solid cp)
 cp_l = 2505 J/kgK (Liquid cp)
 
-OpenTerrace model (siguiendo ATS58.py el template):
-- A 2-degree melting range is used (56 C to 58 C).
-- A single average density is used: (1360+1260)/2 = 1310 kg/m^3.
-- A single average specific heat capacity is used: (1900+2505)/2 = 2202.5 J/kg*K.
-- Latent heat is averaged: (180000+200000)/2 = 190000 J/kg.
-"""
+
 
 import numpy as np
 
@@ -104,4 +99,5 @@ def cp(h:float, p:float=None) -> float:
         float: Specific heat capacity in J/(kg K)
     """
     # Template uses a single constant cp
+
     return _cp * h**0
