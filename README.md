@@ -259,7 +259,7 @@ $$
 **Análisis de Resultados: gráfico comparativo de descarga:**
 
 <p align="justify">
-Los resultados muestran diferencias en el rendimiento, las cuales están directamente relacionadas con el punto de fusión ($T_m$) de cada PCM en comparación con la temperatura inicial de trabajo (80°C).El material con el rendimiento más destacado es, el barium_hydroxide_octahydrate (línea verde). Su punto de fusión de 78°C está perfectamente alineado con la temperatura inicial de 80°C. Esto permite comenzar a solidificarse casi de inmediato, liberando su enorme "batería" de calor latente (265.7 kJ/kg). Esta liberación de energía "ancla" la temperatura del sistema, logrando mantener la temperatura de salida del agua por encima de 79°C durante las 4 horas.En un segundo grupo se encuentran el magnesium_eutectic (línea naranja) y el sodium_acetate_trihydrate (línea azul). Ambos tienen un punto de fusión de 58°C. Sus curvas muestran cómo, al inicio, la temperatura cae mientras liberan calor sensible (enfriándose de 80°C a 58°C). Solo después de horas, cuando se acercan a su punto de fusión, sus curvas comienzan a aplanarse, indicando que están empezando a liberar su calor latente. Estas no logran mantener la temperatura de salida tan alta como el hidróxido de bario.Finalmente, el magnesium_nitrate_hexahydrate (89°C) y el magnesium_chloride_hexahydrate (117°C) muestran el rendimiento más bajo, ya que sus puntos de fusión son superiores a la temperatura inicial de 80°C. Como estos materiales comenzaron la simulación en estado sólido (nunca se "cargaron" o derritieron), no tenían calor latente para liberar. Su aporte fue únicamente de calor sensible, similar al de una roca caliente, lo que explica rápida caída de la temperatura.
+Los resultados muestran diferencias en el rendimiento, las cuales están directamente relacionadas con el punto de fusión ($T_m$) de cada PCM en comparación con la temperatura inicial de trabajo (80°C).El material con el rendimiento más destacado es, el barium_hydroxide_octahydrate (línea verde). Su punto de fusión de 78°C está perfectamente alineado con la temperatura inicial de 80°C. Esto permite comenzar a solidificarse casi de inmediato, liberando su enorme "batería" de calor latente (265.7 kJ/kg). Esta liberación de energía "ancla" la temperatura del sistema, logrando mantener la temperatura de salida del agua por encima de 79°C durante las 4 horas.En un segundo grupo se encuentran el magnesium_eutectic (línea naranja) y el sodium_acetate_trihydrate (línea azul). Ambos tienen un punto de fusión de 58°C. Sus curvas muestran cómo, al inicio, la temperatura cae mientras liberan calor sensible (enfriándose de 80°C a 58°C). Solo después de horas, cuando se acercan a su punto de fusión, sus curvas comienzan a aplanarse, indicando que están empezando a liberar su calor latente. Estas no logran mantener la temperatura de salida tan alta como el hidróxido de bario. Finalmente, el magnesium_nitrate_hexahydrate (89°C) y el magnesium_chloride_hexahydrate (117°C) muestran el rendimiento más bajo, ya que sus puntos de fusión son superiores a la temperatura inicial de 80°C. Como estos materiales comenzaron la simulación en estado sólido (nunca se "cargaron" o derritieron), no tenían calor latente para liberar. Su aporte fue únicamente de calor sensible, similar al de una roca caliente, lo que explica rápida caída de la temperatura.
 
 
 
@@ -269,9 +269,10 @@ Los resultados muestran diferencias en el rendimiento, las cuales están directa
 <img width="1152" height="768" alt="image" src="https://github.com/user-attachments/assets/b373bd73-0c49-40d9-ad85-29a93f010ecd" />
 
 
+**Análisis de Resultados: gráfico comparativo de carga:**
 
-
-
+<p align="justify">
+Los resultados muestran diferencias mínimas en el rendimiento, donde todos los materiales absorben calor sensible rápidamente durante los primeros 30 minutos. Posteriormente, la mayoría de los materiales, en particular el Acetato de Sodio y el Magnesio eutéctico, exhiben una de temperatura de fusión idéntica y bien definida alrededor de los 58-60°C, indicando una absorción eficiente de calor latente en este rango. El Bario Octahidratado y Nitrato de Magnesio muestran puntos de fusión ligeramente diferentes, pero todos los materiales convergen a una temperatura de equilibrio similar de ~80°C al final de la simulación.
 
 
 # Referencias:
