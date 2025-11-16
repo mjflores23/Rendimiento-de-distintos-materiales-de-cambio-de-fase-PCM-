@@ -114,16 +114,22 @@ Este repositorio contiene **5 scripts de simulación de carga**, uno para cada P
  → Espera a que termine... se creará "results_CARGA_CONDUCCION_magnesium_eutectic.npz"
 
 # Simulación 3
-`carga_barium_hydroxide.py`
+`carga_barium_hydroxide_octahydrate.py`
  → Espera a que termine... se creará "results_CARGA_CONDUCCION_barium_hydroxide_octahydrate.npz"
 
 # Simulación 4
-`simulate_magnesium_nitrate.py`
+`carga_magnesium_nitrate_hexahydrate.py`
 → Espera a que termine... se creará "results_CARGA_CONDUCCION_magnesium_nitrate_hexahydrate.npz"
 
 # Simulación 5
-`simulate_magnesium_chloride.py`
+`carga_magnesium_chloride_hexahydrate.py`
 → Espera a que termine... creará "results_CARGA_CONDUCCION_magnesium_chloride_hexahydrate.npz"
+
+### Paso 3: Generar el gráfico comparativo y los Resultados
+Una vez que se tenga los 5 archivos `results_...npz` en la carpeta, ejecuta el script final de ploteo:
+`plot_all_pcms_carga.py`
+
+
 
 
 # Figura del Sistema:
