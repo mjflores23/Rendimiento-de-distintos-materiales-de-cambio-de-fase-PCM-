@@ -131,10 +131,7 @@ Una vez que se tenga los 5 archivos `results_...npz` en la carpeta, ejecuta el s
 
 **Resultados Esperados:**
 Al ejecutar el ``` plot_all_pcms_carga.py```, obtendrás dos salidas:
-1. Un gráfico (`comparacion_descarga_FINAL.png`): Una ventana emergente mostrará el gráfico comparativo de la temperatura de salida de los 5 PCMs a lo largo de las 4 horas.
-
-
-
+1. Un gráfico (`grafico_comparativo_benchmark.svg`): Una ventana emergente mostrará el gráfico comparativo de la temperatura en el Fondo (en Nodo 1) de los 5 PCMs a lo largo de las 4 horas.
 
 # Figura del Sistema:
 <h3 align="center"> Carga Térmica </h3>
@@ -258,6 +255,9 @@ $$
 ## Resultados 
 
 <img width="1200" height="800" alt="image" src="https://github.com/user-attachments/assets/5ea79832-e561-4baa-8ccd-10e7306a2f38" />
+
+
+
 
 <img width="1152" height="768" alt="image" src="https://github.com/user-attachments/assets/d4e96a00-8c1e-4518-8b87-61af02222d12" />
 
