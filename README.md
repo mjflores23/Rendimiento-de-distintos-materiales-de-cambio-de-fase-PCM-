@@ -224,7 +224,7 @@ $$\alpha \frac{\partial^2 T}{\partial x^2}$$
 
 *Derivada de Primer Orden (Término de Convección)*
 <p align="justify">
-Para la convección $(u \dfrac{\partial T}{\partial x})$, utilizamos el esquema *Upwind* de Primer Orden.  
+Para la convección $(u \dfrac{\partial T}{\partial x})$, utilizamos el esquema Upwind de Primer Orden.  
 Este método adapta la dirección de la diferencia finita según la dirección del flujo para garantizar la estabilidad numérica. En este caso el flujo es negativo, por lo cual se mueve de arriba hacia abajo 
   
 **Caso**: Flujo Negativo ($u < 0$)
