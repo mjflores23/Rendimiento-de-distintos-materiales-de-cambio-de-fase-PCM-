@@ -198,7 +198,6 @@ Cada parte de la ecuación representa un fenómeno físico distinto:
 $$\frac{\partial T}{\partial t}$$
 - Es la tasa de cambio de la Temperatura (*T*) con respecto al *Tiempo* (*t*) en un punto fijo.  
 - Qué significa: Indica qué tan rápido se está calentando o enfriando un punto específico en el espacio.  
-- **Si es cero:** Si $\frac{\partial T}{\partial t} = 0$, significa que el sistema ha alcanzado el estado estacionario, las temperaturas ya no cambian con el tiempo.
   
 **Término de Convección**
 
